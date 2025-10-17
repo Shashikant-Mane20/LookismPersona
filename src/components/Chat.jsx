@@ -16,7 +16,7 @@ function Chat({ persona, chatHistory, setChatHistory }) {
     setInput("");
 
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const prompt = `You are ${persona.name}, ${persona.role}. Respond in character.\nUser: ${input}`;
       const result = await model.generateContent(prompt);
       const reply = result.response.text();
